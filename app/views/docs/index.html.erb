@@ -1,8 +1,10 @@
+<div class="container">
 <% @docs.each do |doc| %>
 	<h1><%= doc.title %></h1>
-	<%= doc.pdf %><br>
+	<p><%= doc.description %></p>
 	<%= link_to "View document", doc_path(doc), class: "btn btn-default" %>
 	<hr>
 <% end %>
 
 <%= link_to "New Doc", new_doc_path %>
+</div>

@@ -1,6 +1,9 @@
+<div class="container">
 <h1><%= @doc.title %></h1>
-<p><%= @doc.pdf.url %></p>
+<p><%= @doc.description %></p>
+<p><%= link_to "Download", @doc.pdf.url %></p>
 
 <iframe src=<%= @doc.pdf %> width="600" height="780" style="border: none;"> </iframe>
 <hr>
 <%= link_to "Back", root_path %>
+</div>

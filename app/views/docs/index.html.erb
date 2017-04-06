@@ -1,10 +1,13 @@
+
+
+
 <div class="container">
+<h1>What People Are Reading</h1>
+<hr>
 <% @docs.each do |doc| %>
-	<h1><%= doc.title %></h1>
-	<p><%= doc.description %></p>
-	<%= link_to "View document", doc_path(doc), class: "btn btn-default" %>
+	<p><%= link_to doc.title, doc_path(doc) %></p>
 	<hr>
 <% end %>
 
-<%= link_to "New Doc", new_doc_path %>
+
 </div>

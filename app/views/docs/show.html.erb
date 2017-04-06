@@ -1,9 +1,18 @@
 <div class="container">
-<h1><%= @doc.title %></h1>
-<p><%= @doc.description %></p>
-<p><%= link_to "Download", @doc.pdf.url %></p>
-
+<div class="row">
+<div class="col-md-7">
 <iframe src=<%= @doc.pdf %> width="600" height="780" style="border: none;"> </iframe>
-<hr>
-<%= link_to "Back", root_path %>
+</div>
+
+<div class="col-md-4">
+<h1><%= @doc.title %></h1>
+<p>Upload date: <%= @doc.created_at.localtime %></p>
+<p>File name: <%= @doc.pdf_file_name %></p>
+<p>Size: <%= @doc.pdf_file_size / 1024 %> KB</p>
+
+<p><%= @doc.description %></p>
+<p><%= link_to "Download", @doc.pdf.url, class:"btn btn-success" %></p>
+</div>
+
+
 </div>

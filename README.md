@@ -15,4 +15,4 @@ $ bundle install
 # run build
 $ rails s
 ```
-Live demo can be found on [here on Heroku](https://warm-sea-87760.herokuapp.com/). <br><br>
+Live demo can be found on [here on Heroku](https://warm-sea-87760.herokuapp.com/). The files uploaded are automatically deleted after a while because of Heroku's [ephemeral filesystem](https://help.heroku.com/K1PPS2WM/why-are-my-file-uploads-missing-deleted).<br><br>
